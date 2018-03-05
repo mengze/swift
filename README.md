@@ -12,15 +12,17 @@
 ```
 
 ### 认证参数
+**密码认证：**
 ```JSON
-// 密码认证方法如下：
 {
     "authType": "phone", 
     "memberName": "#登录用户名", 
     "password": "BASE64压缩登录密码"
 }
+```
 
-// 手机认证方法如下：
+**手机认证：**
+```
 {
     "authType": "phone", 
     "memberName": "#手机号", 
@@ -30,7 +32,7 @@
 
 
 ### 认证响应
-**认证成功**
+**认证成功：**
 
 ```JSON
 {
@@ -41,7 +43,7 @@
 }
 ```
 
-**认证失败**
+**认证失败：**
 
 ```JSON
 {
@@ -79,7 +81,7 @@ Authorization: bearer {access_token}
 
 ### 数据响应
 
-**执行成功**
+**执行成功：**
 
 ```JSON
 {
@@ -89,16 +91,21 @@ Authorization: bearer {access_token}
 }
 ```
 
-**执行异常**
+**执行异常：**
+
+- 用户token失效异常：
 
 ```JSON
-// 用户token失效异常：
 {
     "status": "#执行状态 false",
     "code": "#响应码 401",
     "data": "#token异常信息"
 }
-// 业务接口执行异常：
+```
+
+- 业务接口执行异常：
+
+```
 {
     "status": "#执行状态 false",
     "code": "#响应码 200",
@@ -121,7 +128,7 @@ Authorization: bearer {access_token}
 ```
 
 ### 数据响应
-**执行成功**
+**执行成功：**
 
 ```JSON
 {
@@ -130,7 +137,7 @@ Authorization: bearer {access_token}
     "data": "#业务响应数据,json或null"
 }
 ```
-**执行异常**
+**执行异常：**
 
 ```JSON
 {
@@ -157,3 +164,5 @@ Authorization: bearer {access_token}
 
 ### 响应参数
 无
+
+
