@@ -1,3 +1,6 @@
+# README
+
+
 ## 用户认证
 ### 参数类型
 * 请求参数类型：`JSON`
@@ -12,19 +15,19 @@
 ```
 
 ### 认证参数
-```json
+```
 // 密码认证方法如下：
 {
-    ”authType”:”phone”, 
-    ”memberName”:”#登录用户名”,
-    ”password”:”BASE64压缩登录密码”
+    "authType":"phone", 
+    "memberName":"#登录用户名",
+    "password":"BASE64压缩登录密码"
 }
 
 // 手机认证方法如下：
 {
-    ”authType”:”phone”,
-    ”memberName”:”#手机号”,
-    ”password”:”#压缩动态码”
+    "authType":"phone",
+    "memberName":"#手机号",
+    "password":"#压缩动态码"
 }
 ```
 
@@ -37,7 +40,7 @@
     "access_token":"#加密TOKEN信息",
     "token_type":"#认证方式",
     "refresh_token":"#刷新TOKEN",
-    "expires_in":”#TOKEN有效期”
+    "expires_in":"#TOKEN有效期"
 }
 ```
 
@@ -123,7 +126,7 @@ Authorization: bearer {access_token}
 ### 数据响应
 **执行成功**
 
-```
+```JSON
 {
     "status":"#执行状态 true",
     "code":"#响应码 200"，
@@ -157,3 +160,5 @@ Authorization: bearer {access_token}
 
 ### 响应参数
 无
+
+
