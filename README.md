@@ -10,7 +10,7 @@
 根据部署环境决定
 
 ### 请求路径
-```HTTP
+```
 /oauth/token
 ```
 
@@ -57,7 +57,7 @@
 ## 授权业务
 
 ### 请求路径
-```HTTP
+```
 /business/{appModule}/{businessType}/{businessAction}
 ```
 参数描述如下：
@@ -111,7 +111,7 @@ Authorization: bearer {access_token}
 
 ## 开放业务
 ### 请求路径
-```HTTP
+```
 /obs/{appModule}/{businessType}/{businessAction}
 ```
 
