@@ -10,12 +10,12 @@
 根据部署环境决定
 
 ### 请求路径
-```
+```HTTP
 /oauth/token
 ```
 
 ### 认证参数
-```
+```JSON
 // 密码认证方法如下：
 {
     "authType":"phone", 
@@ -35,7 +35,7 @@
 ### 认证响应
 **认证成功**
 
-```
+```JSON
 {
     "access_token":"#加密TOKEN信息",
     "token_type":"#认证方式",
@@ -46,7 +46,7 @@
 
 **认证失败**
 
-```
+```JSON
 {
     "error":"#异常关键字",
     "error_description":"#异常描述"
@@ -57,7 +57,7 @@
 ## 授权业务
 
 ### 请求路径
-```
+```HTTP
 /business/{appModule}/{businessType}/{businessAction}
 ```
 参数描述如下：
@@ -68,12 +68,12 @@
 
 ### 请求头
 
-```
+```HTTP
 Authorization: bearer {access_token}
 ```
 
 ### 请求参数
-```
+```JSON
 {
     "businessName":"#业务ID",
     "businessJsonParam":"#业务参数"
@@ -84,39 +84,39 @@ Authorization: bearer {access_token}
 
 **执行成功**
 
-```
+```JSON
 {
     "status":"#执行状态 true",
-    "code":"#响应码 200"，
-    "data":"#业务响应数据，json或null"
+    "code":"#响应码 200",
+    "data":"#业务响应数据,json或null"
 }
 ```
 
 **执行异常**
 
-```
+```JSON
 // 用户token失效异常：
 {
     "status":"#执行状态 false",
-    "code":"#响应码 401"，
+    "code":"#响应码 401",
     "data":"#token异常信息"
 }
 // 业务接口执行异常：
 {
     "status":"#执行状态 false",
-    "code":"#响应码 200"，
+    "code":"#响应码 200",
     "data":"#业务异常信息"
 }
 ```
 
 ## 开放业务
 ### 请求路径
-```
+```HTTP
 /obs/{appModule}/{businessType}/{businessAction}
 ```
 
 ### 请求参数
-```
+```JSON
 {
     "businessName":"#业务ID",
     "businessJsonParam":"#业务参数"
@@ -129,16 +129,16 @@ Authorization: bearer {access_token}
 ```JSON
 {
     "status":"#执行状态 true",
-    "code":"#响应码 200"，
-    "data":"#业务响应数据，json或null"
+    "code":"#响应码 200",
+    "data":"#业务响应数据,json或null"
 }
 ```
 **执行异常**
 
-```
+```JSON
 {
     "status":"#执行状态 false",
-    "code":"#响应码 200"，
+    "code":"#响应码 200",
     "data":"#业务异常信息"
 }
 ```
@@ -147,12 +147,12 @@ Authorization: bearer {access_token}
 ## 用户注销
 ### 请求路径
 
-```
+```HTTP
 /oauth/revoke-token
 ```
 ### 请求头
 
-```
+```HTTP
 Authorization: bearer {access_token}
 ```
 ### 请求参数
