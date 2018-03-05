@@ -15,16 +15,16 @@
 ```JSON
 // 密码认证方法如下：
 {
-    "authType":"phone", 
-    "memberName":"#登录用户名",
-    "password":"BASE64压缩登录密码"
+    "authType": "phone", 
+    "memberName": "#登录用户名", 
+    "password": "BASE64压缩登录密码"
 }
 
 // 手机认证方法如下：
 {
-    "authType":"phone",
-    "memberName":"#手机号",
-    "password":"#压缩动态码"
+    "authType": "phone", 
+    "memberName": "#手机号", 
+    "password": "#压缩动态码"
 }
 ```
 
@@ -34,10 +34,10 @@
 
 ```JSON
 {
-    "access_token":"#加密TOKEN信息",
-    "token_type":"#认证方式",
-    "refresh_token":"#刷新TOKEN",
-    "expires_in":"#TOKEN有效期"
+    "access_token": "#加密TOKEN信息", 
+    "token_type": "#认证方式", 
+    "refresh_token": "#刷新TOKEN", 
+    "expires_in": "#TOKEN有效期"
 }
 ```
 
@@ -45,8 +45,8 @@
 
 ```JSON
 {
-    "error":"#异常关键字",
-    "error_description":"#异常描述"
+    "error": "#异常关键字",
+    "error_description": "#异常描述"
 }
 
 ```
@@ -72,8 +72,8 @@ Authorization: bearer {access_token}
 ### 请求参数
 ```JSON
 {
-    "businessName":"#业务ID",
-    "businessJsonParam":"#业务参数"
+    "businessName": "#业务ID",
+    "businessJsonParam": "#业务参数"
 }
 ```
 
@@ -83,9 +83,9 @@ Authorization: bearer {access_token}
 
 ```JSON
 {
-    "status":"#执行状态 true",
-    "code":"#响应码 200",
-    "data":"#业务响应数据,json或null"
+    "status": "#执行状态 true",
+    "code": "#响应码 200",
+    "data": "#业务响应数据,json或null"
 }
 ```
 
@@ -94,15 +94,15 @@ Authorization: bearer {access_token}
 ```JSON
 // 用户token失效异常：
 {
-    "status":"#执行状态 false",
-    "code":"#响应码 401",
-    "data":"#token异常信息"
+    "status": "#执行状态 false",
+    "code": "#响应码 401",
+    "data": "#token异常信息"
 }
 // 业务接口执行异常：
 {
-    "status":"#执行状态 false",
-    "code":"#响应码 200",
-    "data":"#业务异常信息"
+    "status": "#执行状态 false",
+    "code": "#响应码 200",
+    "data": "#业务异常信息"
 }
 ```
 
@@ -115,8 +115,8 @@ Authorization: bearer {access_token}
 ### 请求参数
 ```JSON
 {
-    "businessName":"#业务ID",
-    "businessJsonParam":"#业务参数"
+    "businessName": "#业务ID",
+    "businessJsonParam": "#业务参数"
 }
 ```
 
@@ -125,18 +125,18 @@ Authorization: bearer {access_token}
 
 ```JSON
 {
-    "status":"#执行状态 true",
-    "code":"#响应码 200",
-    "data":"#业务响应数据,json或null"
+    "status": "#执行状态 true",
+    "code": "#响应码 200",
+    "data": "#业务响应数据,json或null"
 }
 ```
 **执行异常**
 
 ```JSON
 {
-    "status":"#执行状态 false",
-    "code":"#响应码 200",
-    "data":"#业务异常信息"
+    "status": "#执行状态 false",
+    "code": "#响应码 200",
+    "data": "#业务异常信息"
 }
 ```
 
@@ -157,5 +157,3 @@ Authorization: bearer {access_token}
 
 ### 响应参数
 无
-
-
